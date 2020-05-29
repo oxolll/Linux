@@ -24,7 +24,7 @@ The Layer helps Docker to reduce duplication and increases the re-use
 4. mount namespace:\
 5. network namespace:\
 6. user namespace:\
-### chroot
+### hroot
 ### Control group
 
 ## Install
