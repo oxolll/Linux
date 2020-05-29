@@ -18,12 +18,12 @@ The Layer helps Docker to reduce duplication and increases the re-use
 ## Three techniques in Docker
 
 ### Namespace :
-1. UTS namespace(Unix Time-sharing):\
-2. IPC namespace(Inter-Process Communication):\
-3. PID namespace(Process ID):\
-4. mount namespace:\
-5. network namespace:\
-6. user namespace:\
+1. UTS namespace(Unix Time-sharing):
+2. IPC namespace(Inter-Process Communication):
+3. PID namespace(Process ID):
+4. mount namespace:
+5. network namespace:
+6. user namespace:
 ### hroot
 ### Control group
 
