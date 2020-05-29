@@ -9,10 +9,10 @@
 > 由[柯志亨](https://github.com/smallko)教授所授課
 - Linux 作業系統實務
 - 伺服器架設
-- Linux 系統自動化運維
-dock
-shell-script
-ansible
-rsync
+- Linux 系統自動化運維\
+dock\
+shell-script\
+ansible\
+rsync\
 zabbix
 - 計算機網路
