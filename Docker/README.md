@@ -35,14 +35,19 @@ Isolate user policy of its user IDs, group IDs, keys and capabilities
 ### Control group
 
 ## Commands
-* download docker : `yum install docker-ce -y` or `curl -sSL https://get.docker.com | sh`
+### download docker : 
+`yum install docker-ce -y` or `curl -sSL https://get.docker.com | sh`
 > using `yum install docker` will download old version of docker
-* start service : `systemctl start docker`
-* check version : `docker version`
-* check docker detail : `docker info`
-* check docker working : `docker run hello-world`
+### start service : 
+`systemctl start docker`
+### check version : 
+`docker version`
+### check docker detail : 
+`docker info`
+### check docker working : 
+`docker run hello-world`
 > download a test-image and run in a container
-* 
+### 
 
 ## Reference
 [容器化技術的網路難題，為什麼它是安全的? - 德鴻科技 Grandsys](https://www.grandsys.com.tw/news/rd/901-linux-docker)
