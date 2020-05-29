@@ -11,7 +11,7 @@ Designed to package and run a single service\
 Run your application when you create containers per application
 
 - The isolation guarantees\
-Isolates a set of processes and resources such as memory, CPU, disk, etc..\
+Isolates a set of processes and resources such as memory, CPU, disk, etc..
 
 - A layer for the container\
 Layer helps Docker to reduce duplication and increases the re-use
