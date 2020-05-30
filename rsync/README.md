@@ -20,17 +20,30 @@ Be implemented using rsync are updating a production host from a development mac
 
 * install rsync : `yum install -y rsync`
 
-### Copy like command "cp -r"
-* copy file from /tmp/test.txt to /tmp2 : `rsync -avh /tmp/test.txt /tmp2`\
+### Argument
 using `-a` recursively backup under the folder's files and diractors \
 using `-v` get details \
-using `-h` get good-reading form of numbers
+using `-h` get good-reading form of numbers\
+using `--bwlimit=100K` to limit bw\
+using `-e 'ssh -p 12345'` to change default port:22 to 12345\
+using `--progress` to display commit 進度 speed 剩餘時間\
+using `--delete` to delete the files is not in the resources' folder in remote machine\
+using `--exclude '*.txt'` to exclude the files has '.txt'\
+using `--include '*.c'` to include the files has '.c'\
+
+`rsync -avh --include '*.c' --include '*/' --exclude '*' myfolder/ backup/`\
+The command will include the files have '.c' include in child diractor exclude other\
+`--include` and `--exclude` order can not be chagned\
+If you use `rsync -avh --exclude '*' --include '*.c' --include '*/'  myfolder/ backup/` this command,\
+you will do nothing !
+
+### Copy like command "cp -r"
+* copy file from /tmp/test.txt to /tmp2 : `rsync -avh /tmp/test.txt /tmp2`\
 
 ### Remote backup like command "scp -r"
 Default setting ssh to login remote machine
 * backup file from /tmp/test.txt to [hostname]@[ip address]/tmp2/backup : `rsync -avh /tmp/test.txt root@192.168.154.129:/tmp2`
 * backup file from [hostname]@[ip address]:/tmp2/backup/  to  /tmp/ : `rsync -avh  root@192.168.154.129:/tmp2 /tmp2`
-
 
 ## Reference
 [Introduction to rsync | Linode](https://www.linode.com/docs/tools-reference/tools/introduction-to-rsync/)\
