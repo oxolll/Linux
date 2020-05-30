@@ -24,6 +24,7 @@ Be implemented using rsync are updating a production host from a development mac
 using `-a` recursively backup under the folder's files and diractors \
 using `-v` get details \
 using `-h` get good-reading form of numbers\
+
 using `--bwlimit=100K` to limit bw\
 using `-e 'ssh -p 12345'` to change default port:22 to 12345\
 using `--progress` to display commit 進度 speed 剩餘時間\
