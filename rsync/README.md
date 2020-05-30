@@ -27,9 +27,10 @@ using `-h` get good-reading form of numbers\
 using `--bwlimit=100K` to limit bw\
 using `-e 'ssh -p 12345'` to change default port:22 to 12345\
 using `--progress` to display commit 進度 speed 剩餘時間\
-using `--delete` to delete the files is not in the resources' folder in remote machine\
+using `--delete` to delete the files is not in the resources' folder in remote machine
+
 using `--exclude '*.txt'` to exclude the files has `'.txt'`\
-using `--include '*.c'` to include the files has `'.c'`\
+using `--include '*.c'` to include the files has `'.c'`
 
 The command will include the files have `'.c'` include in child diractor exclude other\
 `rsync -avh --include '*.c' --include '*/' --exclude '*' myfolder/ backup/`\
