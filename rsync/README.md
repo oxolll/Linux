@@ -2,14 +2,14 @@
 
 ## Introduction
 
-Synchronizes files and folders from one location to another\
+Synchronizes files and folders from one location to another
 
-Be implemented using rsync are updating a production host from a development machine, or using a cron job to call rsync to regularly back up data to a storage location.\
+Be implemented using rsync are updating a production host from a development machine, or using a cron job to call rsync to regularly back up data to a storage location.
 
 ### Incremental Backup
 *Rsync is incremental, so once the initial operation has completed, successive backup operations complete very quickly\
 
-*Only the differences between the source and the destination files are copied\
+*Only the differences between the source and the destination files are copied
 
 ## Pre work
 * check openssh-server on
