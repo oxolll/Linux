@@ -38,7 +38,8 @@ Isolate user policy of its user IDs, group IDs, keys and capabilities
 [chroot](https://windsock.io/a-basic-container/)
 ### Control group
 
-## Base Commands
+## Commands
+### Base Commands
 * download docker : `yum install docker-ce -y` or `curl -sSL https://get.docker.com | sh`\
  using `yum install docker` will download old version of docker
 
@@ -53,6 +54,8 @@ Isolate user policy of its user IDs, group IDs, keys and capabilities
 
 * download image : `docker pull centos`\
 using centos for example
+
+* delete image : `docker rmi [image ID]`\
 
 * search image in [dockerhub](https://hub.docker.com/) : `docker search httpd` \
 using httpd for example
@@ -96,8 +99,18 @@ using geting IPAddress for example
 
 * helper : `docker --help`
 
+### How to upload your image to docker hub?
+
+* step1 : `docker tag [image name] [your image name]:[version]`
+
+* step2 : `docker login`\
+insert your account ID, PASSWORD
+
+* step3 : `docker push [your image name]:[version]`
+
 ## Setting Environment Variables 
 
+coming soon.........
 
 ## Reference
 [容器化技術的網路難題，為什麼它是安全的? - 德鴻科技 Grandsys](https://www.grandsys.com.tw/news/rd/901-linux-docker)\
