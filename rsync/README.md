@@ -40,12 +40,12 @@ If you use this command `rsync -avh --exclude '*' --include '*.c' --include '*/'
 you will do nothing !
 
 ### Copy like command "cp -r"
-* copy file from /tmp/test.txt to /tmp2 : `rsync -avh /tmp/test.txt /tmp2`\
+* copy file from /tmp/test.txt to /tmp2/ : `rsync -avh /tmp/test.txt /tmp2/`
 
 ### Remote backup like command "scp -r"
 Default setting ssh to login remote machine
 * backup file from /tmp/test.txt to [hostname]@[ip address]/tmp2/backup : `rsync -avh /tmp/test.txt root@192.168.154.129:/tmp2`
-* backup file from [hostname]@[ip address]:/tmp2/backup/  to  /tmp/ : `rsync -avh  root@192.168.154.129:/tmp2 /tmp2`
+* backup file from [hostname]@[ip address]:/tmp2/backup/  to  /tmp/ : `rsync -avh  root@192.168.154.129:/tmp2/backup/ /tmp/`
 
 ## Reference
 [Introduction to rsync | Linode](https://www.linode.com/docs/tools-reference/tools/introduction-to-rsync/)\
