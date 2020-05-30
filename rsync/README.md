@@ -27,10 +27,9 @@ using `-v` get details \
 using `-h` get good-reading form of numbers
 
 ### Remote backup like command "scp -r"
-Default setting ssh to login remote machine\
-* backup file from /tmp/test.txt to [hostname]@[ip address]/tmp2/backup : `rsync -avh /tmp/test.txt root@192.168.154.129:/tmp2`\
-
-* backup file from [hostname]@[ip address]/tmp2/backup/ to /tmp : `rsync -avh  root@192.168.154.129:/tmp2 /tmp2`
+Default setting ssh to login remote machine
+* backup file from /tmp/test.txt to [hostname]@[ip address]/tmp2/backup : `rsync -avh /tmp/test.txt root@192.168.154.129:/tmp2`
+* backup file from [hostname]@[ip address]:/tmp2/backup/  to  /tmp/ : `rsync -avh  root@192.168.154.129:/tmp2 /tmp2`
 
 
 ## Reference
