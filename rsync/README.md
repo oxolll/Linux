@@ -101,6 +101,7 @@ using `-timefmt` to set timeout format
 3. y is year
 4. H is hour
 5. M is minute
+
 using `-format` to set standard output
 > %[wfeT] argument
 1. w : display filename or directory
