@@ -53,6 +53,8 @@ Default setting ssh to login remote machine
 [关于 rsync 中: 和 :: 及 rysnc 和 ssh 认证协议的区别](https://cloud.tencent.com/developer/article/1043373)\
 [Linux运维：rsync+inotify实时同步](https://segmentfault.com/a/1190000018096553)
 
+---
+
 ## Inotify
 
 ### introduction
