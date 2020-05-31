@@ -139,6 +139,7 @@ using `-e` to listen for specific event(s)
  7. open : files or directory opened
  8. close : files or directory closed
 
+
 [inotify - Wikipedia](https://en.wikipedia.org/wiki/Inotify)\
 [Use inotify-tools on CentOS 7 or RHEL 7 to watch files and directories for events](http://jensd.be/248/linux/use-inotify-tools-on-centos-7-or-rhel-7-to-watch-files-and-directories-for-events)
 --- 
