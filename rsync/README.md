@@ -11,7 +11,7 @@ Using a cron job to call rsync can regularly back up data to a storage location.
 * Rsync is an incremental tool.
 Once the initial operation has completed, the successive backup operations will complete very quickly.
 
-* Only the differences between the source and the destination files are copied
+* Only the differences between the source and the destination files are copied.
 
 ## Pre work
 * check openssh-server on
