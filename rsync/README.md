@@ -73,7 +73,7 @@ Default setting ssh to login remote machine
 [Linux运维：rsync+inotify实时同步](https://segmentfault.com/a/1190000018096553)\
 [Rsync daemon服務器端安裝配置步驟](http://www.trfoor.com/2020/02/27/rsync-daemon%E6%9C%8D%E5%8B%99%E5%99%A8%E7%AB%AF%E5%AE%89%E8%A3%9D%E9%85%8D%E7%BD%AE%E6%AD%A5%E9%A9%9F/)
 
-===
+---
 
 # Inotify
 
@@ -139,12 +139,11 @@ using `-e` to listen for specific event(s)
  7. open : files or directory opened
  8. close : files or directory closed
 
-===
+--- 
 
 ## rsync + inotify
 
-write a script 
-
+write a script(/test.sh)
 ``` 
 #!/bin/bash
 Path=/root/rsync_data
@@ -161,7 +160,11 @@ do
 
 done
 ``` 
+change permission : `chmod +x /test.sh`
+run the script in client : `sh /test.sh`
+enter the directory : `cd rsync_data`
+make new file(in client) : `touch {1..6}.txt`
 
 ## References
 [inotify - Wikipedia](https://en.wikipedia.org/wiki/Inotify)\
-[Use inotify-tools on CentOS 7 or RHEL 7 to watch files and directories for events](http://jensd.be/248/linux/use-inotify-tools-on-centos-7-or-rhel-7-to-watch-files-and-directories-for-events)
+[Use inotify-tools on CentOS 7 or RHEL 7 to watch files and directories for events](http://jensd.be/248/linux/use-inotify-tools-on-centos-7-or-rhel-7-to-watch-files-and-directories-for-events)\
