@@ -29,7 +29,7 @@ using `-h` to get legible form of numbers
 
 using `--bwlimit=100K` to limit bandwidth\
 using `-e 'ssh -p 12345'` to change default port:22 to 12345\
-using `--progress` to display transmit 進度 speed 剩餘時間\
+using `--progress` to display remaining time, transmiting progress and speed\
 using `--delete` to delete the files is not in the resources' folder in remote machine
 
 using `--exclude '*.txt'` to exclude the files has `'.txt'`\
