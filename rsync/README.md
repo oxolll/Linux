@@ -148,7 +148,7 @@ write a script(/test.sh)
 ``` 
 #!/bin/bash
 Path=/root/rsync_data
-backup_Server=192.168.30.5
+backup_Server=192.168.154.128
 
 /usr/bin/inotifywait -mrq --format '%w%f' -e create,close_write,delete $Path  | while read line  
 do
