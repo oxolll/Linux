@@ -4,10 +4,11 @@
 ## Introduction
 Synchronizes files and folders from one location to another.
 
-Be implemented using rsync are updating a production host from a development machine, or using a cron job to call rsync to regularly back up data to a storage location.
+rsync is implemented to update a production host from a development machine.
+Using a cron job to call rsync can regularly back up data to a storage location.
 
 ### Incremental Backup
-* Rsync is incremental, so once the initial operation has completed, successive backup operations complete very quickly
+* Rsync is incremental tool, so once the initial operation has completed, successive backup operations complete very quickly
 
 * Only the differences between the source and the destination files are copied
 
@@ -73,5 +74,10 @@ A separate inotify watch must be created for every subdirectory.
 - max_user_watches : set the number of files the command `inotifywait` and `inotifywach` can monitor
 - max_user_instances : set the number of progress the command `inotifywait` and `inotifywatch` can be used per user
 - max_queued_events : 
+
+## Command
+
+* install inotify : `yum install`
+
 ## References
 [inotify - Wikipedia](https://en.wikipedia.org/wiki/Inotify)\
