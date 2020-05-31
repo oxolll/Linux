@@ -27,7 +27,7 @@ using `-a` to recursively backup under the folder's files and diractors \
 using `-v` to get details \
 using `-h` to get legible form of numbers
 
-using `--bwlimit=100K` to limit bw\
+using `--bwlimit=100K` to limit bandwidth\
 using `-e 'ssh -p 12345'` to change default port:22 to 12345\
 using `--progress` to display commit 進度 speed 剩餘時間\
 using `--delete` to delete the files is not in the resources' folder in remote machine
