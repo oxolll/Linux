@@ -4,11 +4,12 @@
 ## Introduction
 Synchronizes files and folders from one location to another.
 
-rsync is implemented to update a production host from a development machine.
+Rsync is implemented to update a production host from a development machine.
 Using a cron job to call rsync can regularly back up data to a storage location.
 
 ### Incremental Backup
-* Rsync is incremental tool, so once the initial operation has completed, successive backup operations complete very quickly
+* Rsync is an incremental tool.
+Once the initial operation has completed, successive backup operations complete very quickly
 
 * Only the differences between the source and the destination files are copied
 
@@ -77,7 +78,7 @@ A separate inotify watch must be created for every subdirectory.
 
 ## Command
 
-* install inotify : `yum install`
+* install inotify : `yum install -y inotify-tools` or ``
 
 ## References
 [inotify - Wikipedia](https://en.wikipedia.org/wiki/Inotify)\
