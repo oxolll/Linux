@@ -26,6 +26,7 @@ Once the initial operation has completed, the successive backup operations will 
 ### Setting
 * Server
 setup the document : `vi /etc/rsyncd.conf`\
+![](https://github.com/oxolll/Linux/blob/Linux%E7%B3%BB%E7%B5%B1%E8%87%AA%E5%8B%95%E5%8C%96%E9%81%8B%E7%B6%AD/rsync/setting%20of%20rsyncd.conf.png)\
 add user : `useradd -s /sbin/nologin -M rsync`\
 make a folder : `mkdir rsync_test`\
 change owner and group : `chown rsync.rsync rsync_test`\
