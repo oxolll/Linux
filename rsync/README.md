@@ -20,7 +20,24 @@ Once the initial operation has completed, the successive backup operations will 
 
 ## Command
 
+### Install
 * install rsync : `yum install -y rsync`
+
+### Setting
+* Server
+setup the document : `vi /etc/rsyncd.conf`
+add user : `useradd -s /sbin/nologin -M rsync`
+make a folder : `mkdir rsync_test`
+change owner and group : `chown rsync.rsync rsync_test`
+make password documet : `touch /etc/rsync.passwd`
+input a set of account and password : `echo "rsync_backup:test" > /etc/rsync.passwd`
+change permission : `chmod 600 /etc/rsync.passwd`
+start rsync : `rsync --daemon`
+
+* Client
+make password documet : `touch /etc/rsync.passwd`
+input a set of account and password : `echo "rsync_backup:test" > /etc/rsync.passwd`
+change permission : `chmod 600 /etc/rsync.passwd`
 
 ### Argument
 using `-a` to recursively backup under the folder's files and diractors \
@@ -53,9 +70,10 @@ Default setting ssh to login remote machine
 [Introduction to rsync | Linode](https://www.linode.com/docs/tools-reference/tools/introduction-to-rsync/)\
 [Linux 使用 rsync 遠端檔案同步與備份工具教學與範例](https://blog.gtwang.org/linux/rsync-local-remote-file-synchronization-commands/)\
 [关于 rsync 中: 和 :: 及 rysnc 和 ssh 认证协议的区别](https://cloud.tencent.com/developer/article/1043373)\
-[Linux运维：rsync+inotify实时同步](https://segmentfault.com/a/1190000018096553)
+[Linux运维：rsync+inotify实时同步](https://segmentfault.com/a/1190000018096553)\
+[Rsync daemon服務器端安裝配置步驟](http://www.trfoor.com/2020/02/27/rsync-daemon%E6%9C%8D%E5%8B%99%E5%99%A8%E7%AB%AF%E5%AE%89%E8%A3%9D%E9%85%8D%E7%BD%AE%E6%AD%A5%E9%A9%9F/)
 
----
+===
 
 # Inotify
 
@@ -81,7 +99,7 @@ install inotify(two ways)
 * using yum to download :  `yum install -y inotify-tools` 
 * using tar to install : 
  1. download the source files -> `wget http://jensd.be/download/inotify-tools-3.14.tar.gz`
- 2. using tar to install -> `tar -zxf  tar -zxf inotify-tools-3.13.tar.gz `
+ 2. using tar to install -> `tar -zxf inotify-tools-3.13.tar.gz `
  3. enter the folder -> `cd inotify-tools-3.14`
  4. setting configure -> `./configure`
  5. `make`
@@ -120,5 +138,30 @@ using `-e` to listen for specific event(s)
  6. modify : contents were written
  7. open : files or directory opened
  8. close : files or directory closed
+
+===
+
+## rsync + inotify
+
+write a script 
+
+``` 
+#!/bin/bash
+Path=/root/rsync_data
+backup_Server=192.168.30.5
+
+/usr/bin/inotifywait -mrq --format '%w%f' -e create,close_write,delete $Path  | while read line  
+do
+    if [ -f $line ];then
+        rsync -az $line --delete rsync_backup@$backup_Server::backup --password-file=/etc/rsync.passwd
+    else
+        cd $Path &&\
+        rsync -az ./ --delete rsync_backup@$backup_Server::backup --password-file=/etc/rsync.passwd
+    fi
+
+done
+``` 
+
 ## References
 [inotify - Wikipedia](https://en.wikipedia.org/wiki/Inotify)\
+[Use inotify-tools on CentOS 7 or RHEL 7 to watch files and directories for events](http://jensd.be/248/linux/use-inotify-tools-on-centos-7-or-rhel-7-to-watch-files-and-directories-for-events)
