@@ -36,8 +36,8 @@ change permission : `chmod 600 /etc/rsync.passwd`\
 start rsync : `rsync --daemon`
 
 * Client
-make password documet : `touch /etc/rsync.passwd`
-input a set of account and password : `echo "rsync_backup:test" > /etc/rsync.passwd`
+make password documet : `touch /etc/rsync.passwd`\
+input a set of account and password : `echo "rsync_backup:test" > /etc/rsync.passwd`\
 change permission : `chmod 600 /etc/rsync.passwd`
 
 ### Argument
