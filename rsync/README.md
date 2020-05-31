@@ -24,7 +24,7 @@ Once the initial operation has completed, the successive backup operations will 
 * install rsync : `yum install -y rsync`
 
 ### Setting
-* Server
+* Server\
 setup the document : `vi /etc/rsyncd.conf`\
 ![](https://github.com/oxolll/Linux/blob/Linux%E7%B3%BB%E7%B5%B1%E8%87%AA%E5%8B%95%E5%8C%96%E9%81%8B%E7%B6%AD/rsync/setting%20of%20rsyncd.conf.png)\
 add user : `useradd -s /sbin/nologin -M rsync`\
@@ -35,7 +35,7 @@ input a set of account and password : `echo "rsync_backup:test" > /etc/rsync.pas
 change permission : `chmod 600 /etc/rsync.passwd`\
 start rsync : `rsync --daemon`
 
-* Client
+* Client\
 make password documet : `touch /etc/rsync.passwd`\
 input a set of account and password : `echo "rsync_backup:test" > /etc/rsync.passwd`\
 change permission : `chmod 600 /etc/rsync.passwd`
