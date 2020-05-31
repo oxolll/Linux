@@ -9,7 +9,7 @@ Using a cron job to call rsync can regularly back up data to a storage location.
 
 ### Incremental Backup
 * Rsync is an incremental tool.
-Once the initial operation has completed, successive backup operations complete very quickly
+Once the initial operation has completed, the successive backup operations will complete very quickly.
 
 * Only the differences between the source and the destination files are copied
 
@@ -77,8 +77,9 @@ A separate inotify watch must be created for every subdirectory.
 - max_queued_events : 
 
 ## Command
-
-* install inotify : `yum install -y inotify-tools` or ``
+* install inotify
+  : `yum install -y inotify-tools` 
+ `tar -zxf  tar -zxf inotify-tools-3.13.tar.gz `
 
 ## References
 [inotify - Wikipedia](https://en.wikipedia.org/wiki/Inotify)\
