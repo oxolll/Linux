@@ -23,9 +23,9 @@ Once the initial operation has completed, the successive backup operations will 
 * install rsync : `yum install -y rsync`
 
 ### Argument
-using `-a` recursively backup under the folder's files and diractors \
-using `-v` get details \
-using `-h` get good-reading form of numbers
+using `-a` to recursively backup under the folder's files and diractors \
+using `-v` to get details \
+using `-h` to get good-reading form of numbers
 
 using `--bwlimit=100K` to limit bw\
 using `-e 'ssh -p 12345'` to change default port:22 to 12345\
