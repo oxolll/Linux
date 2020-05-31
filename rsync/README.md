@@ -77,9 +77,46 @@ A separate inotify watch must be created for every subdirectory.
 - max_queued_events : 
 
 ## Command
-* install inotify
-1. us `yum install -y inotify-tools` 
- `tar -zxf  tar -zxf inotify-tools-3.13.tar.gz `
+install inotify(two ways)
+* using yum to download :  `yum install -y inotify-tools` 
+* using tar to install : 
+ 1. download the source files -> `wget http://jensd.be/download/inotify-tools-3.14.tar.gz`
+ 2. using tar to install -> `tar -zxf  tar -zxf inotify-tools-3.13.tar.gz `
+ 3. enter the folder -> `cd inotify-tools-3.14`
+ 4. setting configure -> `./configure`
+ 5. `make`
+ 6. install -> `make install`
 
+The command `inotify -mrq /root/rsync_test --timefmt "%d-%m-%y %H:%M" -format "%T %w%f 事件訊息: -e" -e [open/create/delete/move/attrib/access/modify/close]`
+> important argument
+using `-m` to keep listening for events forever
+using `-d` to run in the background
+using `-r` to watch directories recursively
+using `-q` to print less (only print events)
+using `-timefmt` to set timeout format
+> %[mdyHM] argument
+1. m is month
+2. d is day
+3. y is year
+4. H is hour
+5. M is minute
+using `-format` to set standard output
+> %[wfeT]
+1. w : display filename or directory
+2. f : display message 
+3. e : event
+4. T : display timefmt
+
+using `-e` to listen for specific event(s)
+> if omitted, all events are listened for.
+> Events
+ 1. attrib : files or directory attributes changed 
+ 2. access : files or directory contents were read
+ 3. create : create within watched directory
+ 4. delete : delete within watched directory
+ 5. move : move to or feom watched directory
+ 6. modify : contents were written
+ 7. open : files or directory opened
+ 8. close : files or directory closed
 ## References
 [inotify - Wikipedia](https://en.wikipedia.org/wiki/Inotify)\
