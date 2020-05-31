@@ -163,8 +163,11 @@ done
 change permission : `chmod +x /test.sh`\
 run the script in client : `sh /test.sh`\
 enter the directory : `cd rsync_data`\
-make new file(in client) : `touch {1..6}.txt`
-![](https://github.com/oxolll/Linux/blob/Linux%E7%B3%BB%E7%B5%B1%E8%87%AA%E5%8B%95%E5%8C%96%E9%81%8B%E7%B6%AD/rsync/rsync%20%2B%20inotify.png)
+make new file(in client) : `touch {1..6}.txt`\
+![](https://github.com/oxolll/Linux/blob/Linux%E7%B3%BB%E7%B5%B1%E8%87%AA%E5%8B%95%E5%8C%96%E9%81%8B%E7%B6%AD/rsync/rsync%20%2B%20inotify.png)\
+vm(192.168.154.128) -> Server
+vm1(192.168.154.129) -> Client
+> vm : /rsync_test -> vm1 : /rsync_data
 ## References
 [inotify - Wikipedia](https://en.wikipedia.org/wiki/Inotify)\
 [Use inotify-tools on CentOS 7 or RHEL 7 to watch files and directories for events](http://jensd.be/248/linux/use-inotify-tools-on-centos-7-or-rhel-7-to-watch-files-and-directories-for-events)\
