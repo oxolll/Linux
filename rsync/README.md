@@ -7,6 +7,8 @@ Synchronizes files and folders from one location to another.
 Rsync is implemented to update a production host from a development machine.
 Using a cron job to call rsync can regularly back up data to a storage location.
 
+[Introduction to rsync | Linode](https://www.linode.com/docs/tools-reference/tools/introduction-to-rsync/)
+
 ### Incremental Backup
 * Rsync is an incremental tool.
 Once the initial operation has completed, the successive backup operations will complete very quickly.
@@ -68,10 +70,8 @@ Default setting ssh to login remote machine
 * backup file from [hostname]@[ip address]:/tmp2/backup/  to  /tmp/ : `rsync -avh  root@192.168.154.129:/tmp2/backup/ /tmp/`
 
 ## References
-[Introduction to rsync | Linode](https://www.linode.com/docs/tools-reference/tools/introduction-to-rsync/)\
 [Linux 使用 rsync 遠端檔案同步與備份工具教學與範例](https://blog.gtwang.org/linux/rsync-local-remote-file-synchronization-commands/)\
 [关于 rsync 中: 和 :: 及 rysnc 和 ssh 认证协议的区别](https://cloud.tencent.com/developer/article/1043373)\
-[Linux运维：rsync+inotify实时同步](https://segmentfault.com/a/1190000018096553)\
 [Rsync daemon服務器端安裝配置步驟](http://www.trfoor.com/2020/02/27/rsync-daemon%E6%9C%8D%E5%8B%99%E5%99%A8%E7%AB%AF%E5%AE%89%E8%A3%9D%E9%85%8D%E7%BD%AE%E6%AD%A5%E9%A9%9F/)
 
 ---
@@ -169,6 +169,8 @@ make new file(in client) : `touch {1..6}.txt`\
 vm(192.168.154.128) -> Server
 vm1(192.168.154.129) -> Client
 > vm : /rsync_test -> vm1 : /rsync_data
+
 ## References
 [inotify - Wikipedia](https://en.wikipedia.org/wiki/Inotify)\
 [Use inotify-tools on CentOS 7 or RHEL 7 to watch files and directories for events](http://jensd.be/248/linux/use-inotify-tools-on-centos-7-or-rhel-7-to-watch-files-and-directories-for-events)\
+[Linux运维：rsync+inotify实时同步](https://segmentfault.com/a/1190000018096553)
