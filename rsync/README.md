@@ -89,6 +89,7 @@ install inotify(two ways)
 
 The command `inotify -mrq /root/rsync_test --timefmt "%d-%m-%y %H:%M" -format "%T %w%f 事件訊息: -e" -e [open/create/delete/move/attrib/access/modify/close]`
 > important argument
+
 using `-m` to keep listening for events forever
 using `-d` to run in the background
 using `-r` to watch directories recursively
