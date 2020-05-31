@@ -25,13 +25,13 @@ Once the initial operation has completed, the successive backup operations will 
 
 ### Setting
 * Server
-setup the document : `vi /etc/rsyncd.conf`
-add user : `useradd -s /sbin/nologin -M rsync`
-make a folder : `mkdir rsync_test`
-change owner and group : `chown rsync.rsync rsync_test`
-make password documet : `touch /etc/rsync.passwd`
-input a set of account and password : `echo "rsync_backup:test" > /etc/rsync.passwd`
-change permission : `chmod 600 /etc/rsync.passwd`
+setup the document : `vi /etc/rsyncd.conf`\
+add user : `useradd -s /sbin/nologin -M rsync`\
+make a folder : `mkdir rsync_test`\
+change owner and group : `chown rsync.rsync rsync_test`\
+make password documet : `touch /etc/rsync.passwd`\
+input a set of account and password : `echo "rsync_backup:test" > /etc/rsync.passwd`\
+change permission : `chmod 600 /etc/rsync.passwd`\
 start rsync : `rsync --daemon`
 
 * Client
