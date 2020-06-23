@@ -15,6 +15,7 @@ $0 =>  value1 value2 value3 value4\
 $1 => value1\
 $4 => value4\
 | variable	|   meaning |
+| --------- | --------------------------------------------------------|
 |    NF	    |represent the numbers of the patterns' fields|
 |    NR	    |represent the number of which row be delt with now by awk|
 |    FS	    |spilt parameter, default value is " "|
