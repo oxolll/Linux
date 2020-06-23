@@ -16,9 +16,9 @@ example :\
 ```
 [root@vm ~]# awk 'BEGIN{count=0}{count+=1  ;print NR$0;} END{print "user count is ", count}' /etc/passwd
 1root:x:0:0:root:/root:/bin/bash
-            .\
-            .\
-            .\
+            .
+            .
+            .
 35puppet:x:52:52:Puppet:/var/lib/puppet:/sbin/nologin
 user count is  35
 ```
