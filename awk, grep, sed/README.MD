@@ -12,7 +12,25 @@
 ### Format
 `awk 'condition1{action 1} condiction2{action2} ...' filename`  
 -----------------------------
-`-F "what"` mean using what to divide pattern to each field (default value: " ")
+`-F "what"` mean using what to divide pattern to each field (default value: " ")\
+`-v variable` you can define variable before command\
+`--dump-variables[=file]` output the data of global variables to file, default txt is awkvars.out
+example:
+```
+[root@vm ~]# awk --dump-variables=test.out -v apple=123 'END{print apple}' /etc/passwd
+123
+```
+read file test.out
+```
+[root@vm ~]# cat test.out
+ARGC: 2
+ARGIND: 1
+     .
+     .
+     .            
+TEXTDOMAIN: "messages"
+apple: "123"
+```
 ### Support C Language
 You can also use while, do/while, for, break, continue for your command.\
 Like C divide each command by `;` .\
