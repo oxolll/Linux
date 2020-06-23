@@ -155,7 +155,7 @@ a9
 a10
 
 ```
-================ splitor ================================================
+================ splitor ================================================\
 output data:
 ```
 [root@vm ~]# sed '1a a-add line!' test.txt |sed '4c c-line'|sed '5i i-insert line!'|sed -n '1,$p'|sed '11d'|awk '{print NR". "$0}'
