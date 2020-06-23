@@ -12,7 +12,7 @@
 ### Format
 `awk 'condition1{action 1} condiction2{action2} ...' filename`  
 -----------------------------
-`-F "what"` mean using what to divide pattern to each field (default value: " ")\
+`-F "what"` mean using what to divide pattern to each field (default value: " ")
 ### Support C Language
 You can also use while, do/while, for, break, continue for your command.\
 Like C divide each command by `;` .\
