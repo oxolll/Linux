@@ -107,7 +107,14 @@ root     pts/4        192.168.154.1    Mon Jun 22 01:22 - 01:33  (00:11)
 192.168.154.1
 
 ```
-
+### Functions
+coming soon...
+### User Difines Functions 
+coming soon...
+### Redirect Output File
+coming soon...
+### Format Output Data
+coming soon...
 
 
 ## grep
