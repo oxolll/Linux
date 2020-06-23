@@ -18,12 +18,12 @@ if i want to get the second value, i can use `| awk '{print $2}'`\
 | --------- | ----------------------------------------------------------------------|
 |    NF	    |represent the numbers of the patterns' fields|
 |    NR	    |represent the number of which row be delt with now by awk|
+|   FNR     |like NR in current file, but reset the number when read other file |
 |    FS	    |contains the field separator character, default value is " "|
 |   ARGC    |number of parameters in command line|
 |   ARGV    |name of parameters in command line|
 |  ENVIRON  |value of system enviroment variable|
 |  FILENAME |contains the name of the current input-file |
-|   FNR     |like NR in current file, but reset the number when read other file |
 |   OFS     |stores the output field separator character, default value is "space"|
 |   ORS     |stores the output record separator character, default value is "\n"|
 |   RS      |stores the current record separator character,  default value is a "\n"|
