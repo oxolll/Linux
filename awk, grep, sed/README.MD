@@ -10,6 +10,19 @@
 ### Format
 `awk 'condition1{action 1} condiction2{action2} ...' filename`  
 `-F "what"` mean using what to divide pattern to each field (default value: " ")\
+using `;` to divide every command\
+example :\
+> in the action can see the command `count+=1   ;print NR$0;` which use `;` to divide two or more commands
+```
+[root@vm ~]# awk 'BEGIN{count=0}{count+=1  ;print NR$0;} END{print "user count is ", count}' /etc/passwd
+1root:x:0:0:root:/root:/bin/bash
+            .\
+            .\
+            .\
+35puppet:x:52:52:Puppet:/var/lib/puppet:/sbin/nologin
+user count is  35
+```
+`print` and `printf` can print the data\
 There is a data => value1 value2 value3 value4\
 if i want to get the second value, i can use `| awk '{print $2}'`\
 `$0` =>  value1 value2 value3 value4\
