@@ -38,25 +38,26 @@ root     pts/4        192.168.154.1    Mon Jun 22 01:22 - 01:33  (00:11)
 ================ splitor ================================================
 
 > I want to get the data which data includes roo `(^roo)` and gets number of row `(NR)` ,the username `($1)` and ip address `($3)` ,and add the string "first line!" and "last line!" in head`(BEGIN)` and tail`(END)` spilt by "" `(default value)`. 
-
-[root@vm ~]# `last -n 10 | awk 'BEGIN {print NR". first line!"}/^roo/{print NR"."$1", ipaddr:"$3}END{print NR".last line!"}'`\
+```
+[root@vm ~]# last -n 10 | awk 'BEGIN {print NR". first line!"}/^roo/{print NR"."$1", ipaddr:"$3}END{print NR".last line!"}'
 0.first line!\
-1.root, ipaddr:192.168.154.1\
-5.root, ipaddr:192.168.154.1\
-6.root, ipaddr:192.168.154.1\
-10.root, ipaddr:192.168.154.1\
-12.last line!\
-================splitor================================================
+1.root, ipaddr:192.168.154.1
+5.root, ipaddr:192.168.154.1
+6.root, ipaddr:192.168.154.1
+10.root, ipaddr:192.168.154.1
+12.last line!
+```
+================ splitor ================================================
 > Now , i want to use ":"`(-F:)` divide the data which i had get to get the data which only has ip address.
+```
+[root@vm ~]# last -n 10 | awk 'BEGIN {print NR". first line!"}/^roo/{print NR"."$1", ipaddr:"$3}END{print NR".last line!"}' |awk -F: '{print $2}'
 
-[root@vm ~]# last -n 10 | awk 'BEGIN {print NR". first line!"}/^roo/{print NR"."$1", ipaddr:"$3}END{print NR".last line!"}' `|awk -F: '{print $2}'`
-
-192.168.154.1\
-192.168.154.1\
-192.168.154.1\
+192.168.154.1
+192.168.154.1
+192.168.154.1
 192.168.154.1
 
-
+```
 
 -F "what" mean using what to divide pattern to each field
 
