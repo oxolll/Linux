@@ -14,10 +14,10 @@ if i want to get the second value, i can use `| awk '{print $2}'`\
 $0 =>  value1 value2 value3 value4\
 $1 => value1\
 $4 => value4\
-variable	\t\t\t   meaning\
-    NF	  represent the numbers of the patterns' fields\
-    NR	  represent the number of which row be delt with now by awk\
-    FS	  spilt parameter, default value is " "
+| variable	|   meaning |
+|    NF	    |represent the numbers of the patterns' fields|
+|    NR	    |represent the number of which row be delt with now by awk|
+|    FS	    |spilt parameter, default value is " "|
 
 example:
 > raw data  
