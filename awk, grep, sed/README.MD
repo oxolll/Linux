@@ -47,12 +47,12 @@ root     pts/4        192.168.154.1    Mon Jun 22 01:22 - 01:33  (00:11)\
 ================splitor================================================
 > Now , i want to use ":"`(-F:)` divide the data which i had get to get the data which only has ip address.
 
-[root@vm ~]# last -n 10 | awk 'BEGIN {print NR". first line!"}/^roo/{print NR"."$1", ipaddr:"$3}END{print NR".last line!"}' `|awk -F: '{print $2}'`\
+[root@vm ~]# last -n 10 | awk 'BEGIN {print NR". first line!"}/^roo/{print NR"."$1", ipaddr:"$3}END{print NR".last line!"}' `|awk -F: '{print $2}'`
 
 192.168.154.1\
 192.168.154.1\
 192.168.154.1\
-192.168.154.1\
+192.168.154.1
 
  
 
