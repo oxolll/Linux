@@ -8,7 +8,7 @@
 ## awk
 > A tool divide one pattern to more fields each time.
 ### How to work in awk
-![]()
+![](https://github.com/oxolll/Linux/blob/Linux%E7%B3%BB%E7%B5%B1%E8%87%AA%E5%8B%95%E5%8C%96%E9%81%8B%E7%B6%AD/awk%2C%20grep%2C%20sed/awk%E9%81%8B%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9C%96.png)
 ### Format
 `awk 'condition1{action 1} condiction2{action2} ...' filename`  
 -----------------------------
