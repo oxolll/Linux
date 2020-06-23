@@ -7,11 +7,15 @@
 
 ## awk
 > A tool divide one pattern to more fields each time.
+### How to work in awk
+![]()
 ### Format
 `awk 'condition1{action 1} condiction2{action2} ...' filename`  
 -----------------------------
 `-F "what"` mean using what to divide pattern to each field (default value: " ")\
-using `;` to divide every command\
+### Support C Language
+You can also use while, do/while, for, break, continue for your command.\
+Like C divide each command by `;` .\
 example :
 > in the action can see the command `count+=1   ;print NR$0;` which use `;` to divide two or more commands
 ```
