@@ -120,10 +120,70 @@ coming soon...
 ## grep
 
 ## sed
+> A Unix utility that parses and transforms text, using a simple, compact programming language. 
+### How to work in awk
+![]()
+### Format
+`sed 's/regexp/replacement/g' inputFileName > outputFileName`
+-----------------------------
+#### Common Options
+`-n` using silent mode, meaning no data will be output except which has dealt with by special process data\
+`-e` using edit mode, the data will be procesed by command\
+`-f`∶直接將 sed 的動作寫在一個檔案內， -f filename 則可以執行 filename 內的sed 動作；
+`-r∶sed` 的動作支援的是延伸型正規表示法的語法。(預設是基礎正規表示法語法)
+`-i`∶直接修改讀取的檔案內容，而不是由螢幕輸出。
+#### Common Command
+`a` add new line after target line
+`c` replace your target by new value
+`d` delete your target 
+`i` insert new line before your target
+`p` print target line, usually use `-n` together
+`s`         s  ∶取代，可以直接進行取代的工作哩！通常這個 s 的動作可以搭配正規表示法！例如 1,20s/old/new/g 就是啦！
+example:\
+raw data:
+```
+[root@vm ~]# cat test.txt
+a1
+a2
+a3
+a4
+a5
+a6
+a7
+a8
+a9
+a10
 
+```
+================ splitor ================================================
+output data:
+```
+[root@vm ~]# sed '1a a-add line!' test.txt |sed '4c c-line'|sed '5i i-insert line!'|sed -n '1,$p'|sed '11d'|awk '{print NR". "$0}'
+1. a1
+2. a-add line!      --> sed '1a a-add line!'
+3. a2 
+4. c-line           --> sed '4c c-line'
+5. i-insert line!   --> sed '5i i-insert line!'
+6. a4
+7. a5
+8. a6
+9. a7
+10. a8
+11. a10
+                    --> sed -n '1,$p'
+                    --> sed '11d'
+```
+> using the following commands to deal with the data
+`sed '1a a-add line!'` add new line after raw 1 
+`sed '4c c-line'` change raw 4 to c-line (replace)
+`sed '5i i-insert line!'` insert new line before raw 5
+`sed -n '1,$p'` print data raw 1 to end but no repeat the data two times (using -n)
+`sed '11d'` delete the raw 11 (output data lost a9)
 ## Reference
 [鳥哥的 Linux 私房菜 第十一章、正規表示法與文件格式化處理](http://linux.vbird.org/linux_basic/0330regularex.php)\
 [Regular expression From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Regular_expression)\
 [Linux中 sed 和 awk的用法詳解](https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/392291/)\
 [AWK From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/AWK)\
-[Awk教學](http://tw.gitbook.net/awk/index.html)
+[Awk教學](http://tw.gitbook.net/awk/index.html)\
+[sed From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Sed)\
+[三剑客之Sed关于 p、a、d、w、i 、c 模式的干货](https://blog.csdn.net/Sunny_Future/article/details/80174530)
