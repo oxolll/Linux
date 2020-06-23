@@ -9,6 +9,7 @@
 > A tool divide one pattern to more fields each time.
 ### Format
 `awk 'condition1{action 1} condiction2{action2} ...' filename`  
+-------------------------------------------------------------------------------------
 `-F "what"` mean using what to divide pattern to each field (default value: " ")\
 using `;` to divide every command\
 example :\
