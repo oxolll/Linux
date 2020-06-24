@@ -174,6 +174,7 @@ output data:
                     --> sed '11d'
 ```
 > using the following commands to deal with the data
+
 `sed '1a a-add line!'` add new line after raw 1 \
 `sed '4c c-line'` change raw 4 to c-line (replace)\
 `sed '5i i-insert line!'` insert new line before raw 5\
@@ -214,7 +215,8 @@ a10
 
 ```
 > using the following commands to deal with the data
-`sed 's/a5/new!/g' test.txt` replace contain string 'a5' lines with 'new!'
+
+`sed 's/a5/new!/g' test.txt` replace contain string 'a5' lines with 'new!'\
 `test.txt > new.txt` write to new.txt
 ## Reference
 [鳥哥的 Linux 私房菜 第十一章、正規表示法與文件格式化處理](http://linux.vbird.org/linux_basic/0330regularex.php)\
