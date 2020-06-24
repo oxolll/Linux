@@ -121,7 +121,7 @@ coming soon...
 
 ## sed
 > A Unix utility that parses and transforms text, using a simple, compact programming language. 
-### How to work in awk
+### How to work in sed
 ![]()
 ### Format
 `sed 's/regexp/replacement/g' inputFileName > outputFileName`
@@ -225,4 +225,7 @@ a10
 [AWK From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/AWK)\
 [Awk教學](http://tw.gitbook.net/awk/index.html)\
 [sed From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Sed)\
-[三剑客之Sed关于 p、a、d、w、i 、c 模式的干货](https://blog.csdn.net/Sunny_Future/article/details/80174530)
+[三剑客之Sed关于 p、a、d、w、i 、c 模式的干货](https://blog.csdn.net/Sunny_Future/article/details/80174530)\
+[[Linux] 檔案文件字串處理-sed 的用法](https://charleslin74.pixnet.net/blog/post/419884144)\
+[sed](https://zh.wikipedia.org/wiki/Sed)\
+[sed簡介](https://www.itread01.com/p/154537.html)
