@@ -283,4 +283,7 @@ a10
 [三剑客之Sed关于 p、a、d、w、i 、c 模式的干货](https://blog.csdn.net/Sunny_Future/article/details/80174530)\
 [[Linux] 檔案文件字串處理-sed 的用法](https://charleslin74.pixnet.net/blog/post/419884144)\
 [sed](https://zh.wikipedia.org/wiki/Sed)\
-[sed簡介](https://www.itread01.com/p/154537.html)
+[sed簡介](https://www.itread01.com/p/154537.html)\
+[Linux 匹配文字 grep 指令用法教學與範例](https://blog.gtwang.org/linux/linux-grep-command-tutorial-examples/)\
+[grep 指令實用技巧](https://www.opencli.com/linux/linux-grep-tips)\
+[linux grep命令详解](https://blog.csdn.net/zqg4919/article/details/77573906)
