@@ -119,8 +119,6 @@ coming soon...
 
 ## grep
 >  A command-line utility for searching plain-text data sets for lines that match a regular expression.
-### How to work in sed
-![]()
 ### Format
 `grep [option] [target-string] filename/path`  
 -----------------------------
