@@ -129,17 +129,17 @@ coming soon...
 #### Common Options
 `-n` using silent mode, meaning no data will be output except which has dealt with by special process data\
 `-e` using edit mode, the data will be procesed by command\
-`-f`∶直接將 sed 的動作寫在一個檔案內， -f filename 則可以執行 filename 內的sed 動作；\
-`-r∶sed` 的動作支援的是延伸型正規表示法的語法。(預設是基礎正規表示法語法)\
-`-i`∶直接修改讀取的檔案內容，而不是由螢幕輸出。
+`-f` ?\
+`-r∶sed` ?\
+`-i` write to the target file
 #### Common Command
 `a` add new line after target line\
 `c` replace your target by new value\
 `d` delete your target \
 `i` insert new line before your target\
 `p` print target line, usually use `-n` together\
-`s`         s  ∶取代，可以直接進行取代的工作哩！通常這個 s 的動作可以搭配正規表示法！例如 1,20s/old/new/g 就是啦！\
-example:\
+`s` format is `s/yourtarget/yourgoal/g`, replace yourtarget with yourgoal
+example1:\
 raw data:
 ```
 [root@vm ~]# cat test.txt
@@ -179,6 +179,43 @@ output data:
 `sed '5i i-insert line!'` insert new line before raw 5\
 `sed -n '1,$p'` print data raw 1 to end but no repeat the data two times (using -n)\
 `sed '11d'` delete the raw 11 (output data lost a9)
+
+===========================================================================\
+example2:\
+raw data:
+```
+[root@vm ~]# cat test.txt
+a1
+a2
+a3
+a4
+a5
+a6
+a7
+a8
+a9
+a10
+```
+================ splitor ================================================\
+output data:
+```
+[root@vm ~]# sed 's/a5/new!/g' test.txt > new.txt
+[root@vm ~]# cat new.txt
+a1
+a2
+a3
+a4
+new!    -> replace a5 with new!
+a6
+a7
+a8
+a9
+a10
+
+```
+> using the following commands to deal with the data
+`sed 's/a5/new!/g' test.txt` replace contain string 'a5' lines with 'new!'
+`test.txt > new.txt` write to new.txt
 ## Reference
 [鳥哥的 Linux 私房菜 第十一章、正規表示法與文件格式化處理](http://linux.vbird.org/linux_basic/0330regularex.php)\
 [Regular expression From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Regular_expression)\
