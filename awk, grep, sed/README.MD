@@ -118,7 +118,64 @@ coming soon...
 
 
 ## grep
-
+>  A command-line utility for searching plain-text data sets for lines that match a regular expression.
+### How to work in sed
+![]()
+### Format
+`grep [option] [target-string] filename/path`  
+-----------------------------
+#### Common Options
+`-n` display number of raws\
+`-c` count the numeber of raws\
+`-i` regardless capital letter or lowercase\
+`-v` exclude the target string\
+`-r` recursive search the target path \
+`--include` search target string appoint some condition in file, usually use -r together\
+`-A n` display n line after the target sting's raw \
+`-B n` display n line before the target sting's raw \
+`-C n` display n line after and before the target sting's raw \
+`--color=` `never` , `auto`, `always` never means no use color, auto means use auto setting, always means using color
+#### Using Regular Expression For Search
+You can also use regular expression for your command.\
+`^ string` using string in head \
+`string $` using string in tail \
+`^ string *` using string zero time or more in head \
+`^ string \?` using string zero time or one in head \
+`^ string \+` using string than zero time in head \
+`string1 \| string2` using string1 or string2 \
+example :\
+raw data
+```
+[root@vm ~]# cat test.txt
+a1
+a2
+a3
+a4
+a5
+a6
+a7
+a8
+a9
+a10
+```
+`^ string` 
+```
+[root@vm ~]# grep "^1" test.txt
+[root@vm ~]# grep "^a1" test.txt
+a1
+a10
+```
+`string $` and `^ string *`
+```
+[root@vm ~]# grep "10*$" test.txt
+a1
+a10
+```
+`string1 \| string2`
+```
+[root@vm ~]# grep "b\|a5" test.txt
+a5
+```
 ## sed
 > A Unix utility that parses and transforms text, using a simple, compact programming language. 
 ### How to work in sed
