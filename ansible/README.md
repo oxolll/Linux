@@ -136,9 +136,12 @@ PLAY RECAP *********************************************************************
 
 ```
 ## Preset
-vi /etc/hosts
-ssh-keygen
-ssh-copy-id root@192.168.x.x
+* set enviroment & nopassword setting
+vi /etc/hosts\
+ssh-keygen\
+ssh-copy-id root@192.168.x.x\
+============================= splitor ================================\
+* install ansible
 yum install -y ansible
 
 ## Command 
