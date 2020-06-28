@@ -3,8 +3,8 @@ Control machine
 ## Inventory
 Like a list of managed node, contain domainname, ipaddr, port, etc.. 
 ## Ad-Hoc command
-* Like a simple command
-example : `ping` \
+- Like a simple command
+example : `ping` 
 ```
 [root@vm yum.repos.d]# ansible all -m ping
 localhost | SUCCESS => {
@@ -30,8 +30,8 @@ localhost | SUCCESS => {
 }
 
 ```
-============================= splitor ================================
-example : `echo`\
+============================= splitor ================================\
+example : `echo`
 ```
 [root@vm yum.repos.d]# ansible all -m command -a "echo hello world"
 localhost | CHANGED | rc=0 >>
@@ -44,7 +44,7 @@ hello world
 
 ## Playbook
 Like a shell script\
-using YAML format\
+using YAML format
 
 ## preset
 vi /etc/hosts
