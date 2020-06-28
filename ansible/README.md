@@ -5,9 +5,9 @@
 Ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code.
 Control machine
 ## Inventory
-Like a list of managed node, contain domainname, ipaddr, port, etc.. \
-default path is `/etc/ansible/hosts` \
-you can also edit the setting in `/etc/ansible/ansible.conf`
+- Like a list of managed node, contain domainname, ipaddr, port, etc.. \
+- default path is `/etc/ansible/hosts` \
+- you can also edit the setting in `/etc/ansible/ansible.conf`
 ```
 [defaults]
 
