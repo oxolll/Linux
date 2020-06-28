@@ -143,7 +143,7 @@ yum install -y ansible
 
 ## Command 
 `ansible app1 -m command "ls /root/"` list app1 data in `/root/`\
-`ansible --version` check version\
+`ansible --version` check version
 
 
 ### Reference
