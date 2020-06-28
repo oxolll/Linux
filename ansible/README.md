@@ -135,14 +135,20 @@ PLAY RECAP *********************************************************************
 
 
 ```
-## preset
+## Preset
 vi /etc/hosts
 ssh-keygen
 ssh-copy-id root@192.168.x.x
 yum install -y ansible
 
-## command 
-ansible app1 -m command "ls /root/"
+## Command 
+`ansible app1 -m command "ls /root/"` list app1 data in `/root/`\
+`ansible --version` check version\
+
 
 ### Reference
 [現代 IT 人一定要知道的 Ansible 自動化組態技巧 06. 怎麼操作 Ansible？](https://chusiang.gitbooks.io/automate-with-ansible/content/06.how-to-use-the-ansible.html)\
+[Ansible (software) From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Ansible_(software))\
+[使用 Ansible 实现数据中心自动化管理](https://www.ibm.com/developerworks/cn/opensource/os-using-ansible-for-data-center-it-automation/index.html)\
+[ansible教程-马哥2019全新ansible入门到精通](https://www.bilibili.com/video/BV18t411f7CN?from=search&seid=2332676631451641625)\
+[ Ansible中文权威指南](https://ansible-tran.readthedocs.io/en/latest/docs/common_return_values.html)
