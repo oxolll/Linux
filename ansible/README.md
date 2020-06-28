@@ -1,7 +1,8 @@
 # ansible
 
 ## Introduction
-> What is ansible? \
+> What is ansible? 
+
 Ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code.
 Control machine
 ## Inventory
