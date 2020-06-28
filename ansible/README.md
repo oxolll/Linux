@@ -3,7 +3,8 @@ Control machine
 ## Inventory
 Like a list of managed node, contain domainname, ipaddr, port, etc.. 
 ## Ad-Hoc command
-- Like a simple command
+- like a simple command
+- execute easy task 
 example : `ping` 
 ```
 [root@vm yum.repos.d]# ansible all -m ping
@@ -43,8 +44,8 @@ hello world
 ```
 
 ## Playbook
-Like a shell script\
-using YAML format
+- like a shell script
+- using YAML format
 
 ## preset
 vi /etc/hosts
