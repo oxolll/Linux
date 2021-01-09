@@ -11,5 +11,5 @@
 > 加上ipsec 有較高安全性
 
 ## 參考資料
-[](https://www.jannet.hk/zh-Hant/post/generic-routing-encapsulation-gre/)\
-[](https://www.jannet.hk/zh-Hant/post/internet-protocol-security-ipsec/)
+[Jan Ho 的網路世界-Generic Routing Encapsulation (GRE) 通用路由封裝](https://www.jannet.hk/zh-Hant/post/generic-routing-encapsulation-gre/)\
+[Jan Ho 的網路世界-Internet Protocol Security(IPsec) 網際網路安全協定](https://www.jannet.hk/zh-Hant/post/internet-protocol-security-ipsec/)
