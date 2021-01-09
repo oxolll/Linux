@@ -15,3 +15,30 @@ R1(config-line)#password 12345
 R1(config-line)#transport input telnet
 
 ```
+
+in R2
+```
+Router>en
+Router#conf t
+Router(config)#hostname R2
+R2(config)#int e0/0
+R2(config-if)#ip addr 12.0.0.2 255.255.255.0
+R2(config-if)#no shut
+R2(config-if)#^Z
+R2#telnet 12.0.0.1
+Trying 12.0.0.1 ... Open
+
+
+User Access Verification
+
+Password:
+R1>en
+Password:
+R1#show ip int br
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                12.0.0.1        YES manual up                    up  
+Ethernet0/1                unassigned      YES unset  administratively down down
+Ethernet0/2                unassigned      YES unset  administratively down down
+Ethernet0/3                unassigned      YES unset  administratively down down
+
+```
