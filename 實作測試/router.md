@@ -6,21 +6,18 @@
 ## in R1
 ```
 R1(config)#ip route 192.168.1.0 255.255.255.0 12.0.0.2      //設定R1的路由往192.168.1.x網段經由12.0.0.2
-
 ```
 ## in R2
 ```
 R2(config)#ip route 192.168.2.0 255.255.255.0 12.0.0.1      //設定R2的路由往192.168.2.x網段經由12.0.0.1
-
 ```
-現在兩邊都可互ping 
+現在兩邊都可互ping /
 VPC(左)
 ```
 VPCS> ping 192.168.1.2
 
 84 bytes from 192.168.1.2 icmp_seq=1 ttl=62 time=2.937 ms
 84 bytes from 192.168.1.2 icmp_seq=2 ttl=62 time=1.426 ms
-
 ```
 VPC(右)
 ```
@@ -28,5 +25,4 @@ VPCS> ping 192.168.2.1
 
 84 bytes from 192.168.2.1 icmp_seq=1 ttl=62 time=2.124 ms
 84 bytes from 192.168.2.1 icmp_seq=2 ttl=62 time=0.893 ms
-
 ```
