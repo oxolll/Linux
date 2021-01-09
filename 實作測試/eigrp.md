@@ -38,7 +38,10 @@ H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  
 ![](https://github.com/oxolll/Linux/blob/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%B6%B2%E8%B7%AF/%E5%AF%A6%E4%BD%9C%E6%B8%AC%E8%A9%A6/eigrp2.png)
 
 ## summarization
+> 做summarization合併
 ![](https://github.com/oxolll/Linux/blob/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%B6%B2%E8%B7%AF/%E5%AF%A6%E4%BD%9C%E6%B8%AC%E8%A9%A6/eigrp3.png)
 ![](https://github.com/oxolll/Linux/blob/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%B6%B2%E8%B7%AF/%E5%AF%A6%E4%BD%9C%E6%B8%AC%E8%A9%A6/eigrp4.png)
+![](https://github.com/oxolll/Linux/blob/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%B6%B2%E8%B7%AF/%E5%AF%A6%E4%BD%9C%E6%B8%AC%E8%A9%A6/eigrp5.png)
+
 ## 參考資料
 [Jan Ho 的網路世界-Enhanced Interior Gateway Routing Protocol(EIGRP) 增強型內部網關路由協定](https://www.jannet.hk/en/post/enhanced-interior-gateway-routing-protocol-eigrp/)
