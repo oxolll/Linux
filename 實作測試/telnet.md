@@ -1,4 +1,4 @@
-# 使用telnet 連線
+# 使用telnet遠端連線
 ![](https://github.com/oxolll/Linux/blob/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%B6%B2%E8%B7%AF/%E5%AF%A6%E4%BD%9C%E6%B8%AC%E8%A9%A6/telnet.png)
 
 > 在R2使用telnet連線至R1，並顯示R1的配置資料
