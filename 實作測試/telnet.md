@@ -6,13 +6,14 @@ in R1
 Router>en
 Router#conf t
 Router(config)#hostname R1
+R1(config)#en password 66666  //設定密碼(特權密碼)
 R1(config)#int e0/0
 R1(config-if)#ip addr 12.0.0.1 255.255.255.0
 R1(config-if)#no shut
 R1(config-if)#conf t
-R1(config)#line vty 0 4
-R1(config-line)#password 12345
-R1(config-line)#transport input telnet
+R1(config)#line vty 0 4     //設定Telnet連線數量 0~4，共5組
+R1(config-line)#password 12345      //設定密碼(telnet密碼)
+R1(config-line)#transport input telnet  //啟動telnet
 
 ```
 
@@ -25,16 +26,16 @@ R2(config)#int e0/0
 R2(config-if)#ip addr 12.0.0.2 255.255.255.0
 R2(config-if)#no shut
 R2(config-if)#^Z
-R2#telnet 12.0.0.1
+R2#telnet 12.0.0.1      //使用telnet連線到R1(12.0.0.1)
 Trying 12.0.0.1 ... Open
 
 
 User Access Verification
 
-Password:
+Password:       //輸入telnet密碼(12345)
 R1>en
-Password:
-R1#show ip int br
+Password:       //輸入特權密碼(66666)
+R1#show ip int br       //顯示R1的介面配置
 Interface                  IP-Address      OK? Method Status                Protocol
 Ethernet0/0                12.0.0.1        YES manual up                    up  
 Ethernet0/1                unassigned      YES unset  administratively down down
