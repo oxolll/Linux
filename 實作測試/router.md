@@ -26,5 +26,10 @@ VPCS> ping 192.168.2.1
 84 bytes from 192.168.2.1 icmp_seq=1 ttl=62 time=2.124 ms
 84 bytes from 192.168.2.1 icmp_seq=2 ttl=62 time=0.893 ms
 ```
+
+## 靜態路由設定AD值 來決定路徑
+> AD值越小，優先權越高
+例子:`ip route 23.1.1.0 255.255.255.0 13.1.1.3 10(AD值)`
 ## 參考資料
-[[筆記]Cisco基本指令-路由](https://david50.pixnet.net/blog/post/45224331-%5B%E7%AD%86%E8%A8%98%5Dcisco%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4-%E8%B7%AF%E7%94%B1)
+[[筆記]Cisco基本指令-路由](https://david50.pixnet.net/blog/post/45224331-%5B%E7%AD%86%E8%A8%98%5Dcisco%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4-%E8%B7%AF%E7%94%B1)/
+[Jan Ho 的網路世界-Administrative Distance(AD)管理距離](https://www.jannet.hk/zh-Hant/post/administrative-distance-ad/)
