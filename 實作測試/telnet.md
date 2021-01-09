@@ -45,3 +45,6 @@ Ethernet0/2                unassigned      YES unset  administratively down down
 Ethernet0/3                unassigned      YES unset  administratively down down
 
 ```
+
+## 參考資料
+[James LAB-Cisco設定遠端連線(Telnet & SSH)](http://www.james-tw.com/cisco/cisco-she-ding-yuan-duan-lian-xian-telnet-ssh)
