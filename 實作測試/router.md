@@ -26,3 +26,5 @@ VPCS> ping 192.168.2.1
 84 bytes from 192.168.2.1 icmp_seq=1 ttl=62 time=2.124 ms
 84 bytes from 192.168.2.1 icmp_seq=2 ttl=62 time=0.893 ms
 ```
+## 參考資料
+[[筆記]Cisco基本指令-路由](https://david50.pixnet.net/blog/post/45224331-%5B%E7%AD%86%E8%A8%98%5Dcisco%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4-%E8%B7%AF%E7%94%B1)
