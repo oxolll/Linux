@@ -3,7 +3,7 @@
 
 > 在R2使用telnet連線至R1，並顯示R1的配置資料
 
-in R1
+## in R1
 ```
 Router>en
 Router#conf t
@@ -19,7 +19,7 @@ R1(config-line)#transport input telnet  //啟動telnet
 
 ```
 
-in R2
+## in R2
 ```
 Router>en
 Router#conf t

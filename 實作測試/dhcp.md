@@ -2,7 +2,7 @@
 ![](https://github.com/oxolll/Linux/blob/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%B6%B2%E8%B7%AF/%E5%AF%A6%E4%BD%9C%E6%B8%AC%E8%A9%A6/dhcp.png)
 > 新增一台VPC使用DHCP獲取ip
 
-in R2
+## in R2
 ```
 R2(config)#int e0/1
 R2(config-if)#ip addr 192.168.1.1 255.255.255.0     //配置e0/1的ip(192.168.1.1)
@@ -14,7 +14,7 @@ R2(dhcp-config)#default-router 192.168.1.1
 R2(dhcp-config)#dns-server 8.8.8.8
 
 ```
-in VPC
+## in VPC
 ```
 VPCS> ip dhcp       //使用DHCP獲取ip
 DDORA IP 192.168.1.2/24 GW 192.168.1.1
@@ -33,7 +33,7 @@ RHOST:PORT  : 127.0.0.1:30000
 MTU         : 1500
 
 ```
-檢視連線狀況
+## 檢視連線狀況
 ```
 VPCS> ping 192.168.1.1      
 
