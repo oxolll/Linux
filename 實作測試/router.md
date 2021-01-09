@@ -1,4 +1,4 @@
-# 使用Router連線
+# 使用Route連線
 ![](https://github.com/oxolll/Linux/blob/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%B6%B2%E8%B7%AF/%E5%AF%A6%E4%BD%9C%E6%B8%AC%E8%A9%A6/route.png)
 > 使兩台VPC使用靜態路由互相ping
 >現在兩台VPC皆使用DHCP獲取ip，所以僅能ping通鄰居
